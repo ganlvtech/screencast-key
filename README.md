@@ -6,6 +6,8 @@ Displays the keys that you typed on the screen. It is useful for screencasts.
 
 ![Screenshot](screenshots/01.jpg)
 
+![Screenshot](screenshots/02.gif)
+
 ## Usage
 
 1. [Download and install AutoHotKey](https://www.autohotkey.com/download/)
