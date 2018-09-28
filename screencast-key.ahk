@@ -88,7 +88,7 @@ InitializeWindow()
 InitializeHotKeys()
 {
     global
-    Loop Parse, HOT_KEYS, `,
+    Loop Parse, HOT_KEYS, `
         Hotkey, ~*%A_LoopField%, KeyHandleLabel, UseErrorLevel
     return
 
