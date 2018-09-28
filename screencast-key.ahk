@@ -36,7 +36,7 @@ TRANS_OPACITY := 128
 LIST_BUBBLING_DIRECTION = 1
 
 HOT_KEYS = 1,2,3,4,5,6,7,8,9,0,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
-,-,=,[,],\,`;,',`,,.,/,``
+,-,=,[,],\,`;,',.,/,``
 ,CapsLock,Space,Tab,Enter,Escape,Backspace
 ,ScrollLock,Delete,Insert,Home,End,PgUp,PgDn,Up,Down,Left,Right
 ,Numpad0,Numpad1,Numpad2,Numpad3,Numpad4,Numpad5,Numpad6,Numpad7,Numpad8,Numpad9,NumpadDot
@@ -88,8 +88,12 @@ InitializeWindow()
 InitializeHotKeys()
 {
     global
-    Loop Parse, HOT_KEYS, `,
+
+    Loop, Parse, HOT_KEYS, `,
         Hotkey, ~*%A_LoopField%, KeyHandleLabel, UseErrorLevel
+    ; Special chars
+    Hotkey, ~*`,, KeyHandleLabel, UseErrorLevel
+
     return
 
     KeyHandleLabel:
